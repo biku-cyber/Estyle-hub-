@@ -1,0 +1,32 @@
+/* Style Hub — Responsive tweaks */
+
+@media (max-width: 1024px) {
+  .container { padding: 0 1.25rem; }
+}
+
+@media (max-width: 720px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.85rem; }
+  .section { padding: 3.5rem 0; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { justify-content: center; }
+  .filters { flex-direction: column; align-items: stretch; }
+  .filters select { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .card-body { padding: 1rem; }
+  .btn { padding: 0.8rem 1.3rem; }
+  .toast { min-width: 0; width: 100%; }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

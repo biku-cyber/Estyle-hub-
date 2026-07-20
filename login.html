@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Login — Style Hub</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <main style="min-height:100dvh; display:grid; place-items:center; padding: 2rem;">
+    <form id="loginForm" class="card animate-up" style="padding: 2.5rem; max-width: 420px; width: 100%;">
+      <div class="brand" style="justify-content:center; margin-bottom: 1.5rem;">
+        <img src="/assets/logo.svg" alt="" style="height:36px;" />
+      </div>
+      <h2 class="center" style="font-size:1.35rem; margin-bottom: 1.5rem;">Sign in to dashboard</h2>
+      <div class="form">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        <p class="text-muted center" style="font-size:.8rem;">Demo mode accepts any credentials.</p>
+      </div>
+    </form>
+  </main>
+  <script src="/js/firebase.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
