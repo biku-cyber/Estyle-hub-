@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Dashboard — Style Hub</title>
+  <meta name="description" content="Your Style Hub dashboard: appointments, favorites, offers, and account settings." />
+  <meta property="og:title" content="My Dashboard — Style Hub" />
+  <meta property="og:description" content="Manage your bookings, saved styles, and profile." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#f5b301" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+  <div id="nav-mount"></div>
+  <main>
+    <section class="page-header" style="padding-bottom:1.5rem;">
+      <div class="container">
+        <h1>My <span class="text-gradient">Dashboard</span></h1>
+        <p data-dash-greeting>Welcome back.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container dash-shell">
+        <aside class="dash-side card">
+          <div class="dash-user">
+            <div class="dash-avatar" data-dash-avatar>U</div>
+            <div>
+              <strong data-dash-name>—</strong>
+              <div class="text-muted" style="font-size:.85rem;" data-dash-phone>—</div>
+            </div>
+          </div>
+          <nav class="dash-nav" aria-label="Dashboard sections">
+            <button class="dash-tab active" data-tab="profile">Profile</button>
+            <button class="dash-tab" data-tab="upcoming">Upcoming</button>
+            <button class="dash-tab" data-tab="history">History</button>
+            <button class="dash-tab" data-tab="favorites">Favorites</button>
+            <button class="dash-tab" data-tab="notifications">Notifications</button>
+            <button class="dash-tab" data-tab="offers">Offers &amp; Coupons</button>
+            <button class="dash-tab" data-tab="reviews">My Reviews</button>
+            <button class="dash-tab" data-tab="settings">Settings</button>
+          </nav>
+          <button class="btn btn-secondary btn-block mt-4" data-dash-logout>Log out</button>
+        </aside>
+
+        <div class="dash-main">
+          <!-- Profile -->
+          <section class="dash-panel" data-panel="profile">
+            <div class="card" style="padding:1.75rem;">
+              <h2 style="margin-bottom:1.25rem;">Profile</h2>
+              <div class="form-row">
+                <div class="field">
+                  <label for="pfName">Name</label>
+                  <input id="pfName" type="text" autocomplete="name" />
+                </div>
+                <div class="field">
+                  <label for="pfPhone">Mobile number</label>
+                  <input id="pfPhone" type="tel" readonly />
+                  <div class="text-muted" style="font-size:.78rem; margin-top:.35rem;">
+                    Verified. To change, log out and sign in with the new number.
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="pfEmail">Email (optional)</label>
+                <input id="pfEmail" type="email" autocomplete="email" placeholder="you@example.com" />
+              </div>
+              <button class="btn btn-primary" data-save-profile>Save changes</button>
+            </div>
+            <div class="grid grid-3 mt-4">
+              <div class="card stat-card"><span>Upcoming</span><strong data-stat="upcoming">0</strong></div>
+              <div class="card stat-card"><span>Total visits</span><strong data-stat="total">0</strong></div>
+              <div class="card stat-card"><span>Saved styles</span><strong data-stat="favs">0</strong></div>
+            </div>
+          </section>
+
+          <!-- Upcoming -->
+          <section class="dash-panel hidden" data-panel="upcoming">
+            <div class="card" style="padding:1.5rem;">
+              <h2>Upcoming Bookings</h2>
+              <div data-list="upcoming" class="dash-list"></div>
+            </div>
+          </section>
+
+          <!-- History -->
+          <section class="dash-panel hidden" data-panel="history">
+            <div class="card" style="padding:1.5rem;">
+              <h2>Appointment History</h2>
+              <div data-list="history" class="dash-list"></div>
+            </div>
+          </section>
+
+          <!-- Favorites -->
+          <section class="dash-panel hidden" data-panel="favorites">
+            <div class="card" style="padding:1.5rem;">
+              <h2>Favorite Haircuts</h2>
+              <div data-list="favorites" class="grid grid-3"></div>
+            </div>
+          </section>
+
+          <!-- Notifications -->
+          <section class="dash-panel hidden" data-panel="notifications">
+            <div class="card" style="padding:1.5rem;">
+              <h2>Notifications</h2>
+              <div data-list="notifications" class="dash-list"></div>
+            </div>
+          </section>
+
+          <!-- Offers -->
+          <section class="dash-panel hidden" data-panel="offers">
+            <div class="card" style="padding:1.5rem;">
+              <h2>Offers &amp; Coupons</h2>
+              <div data-list="offers" class="grid grid-2"></div>
+            </div>
+          </section>
+
+          <!-- Reviews -->
+          <section class="dash-panel hidden" data-panel="reviews">
+            <div class="card" style="padding:1.5rem;">
+              <h2>My Reviews</h2>
+              <div data-list="reviews" class="dash-list"></div>
+            </div>
+          </section>
+
+          <!-- Settings -->
+          <section class="dash-panel hidden" data-panel="settings">
+            <div class="card" style="padding:1.5rem;">
+              <h2>Settings</h2>
+              <label class="switch-row">
+                <span>Email booking reminders</span>
+                <input type="checkbox" data-setting="emailReminders" />
+              </label>
+              <label class="switch-row">
+                <span>Promotional SMS &amp; offers</span>
+                <input type="checkbox" data-setting="smsOffers" />
+              </label>
+              <label class="switch-row">
+                <span>Dark theme</span>
+                <input type="checkbox" data-setting-theme />
+              </label>
+              <div class="mt-4">
+                <button class="btn btn-secondary" data-dash-logout>Log out</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+
+  <script src="/js/firebase.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

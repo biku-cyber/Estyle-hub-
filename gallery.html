@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haircuts Gallery — Style Hub</title>
+  <meta name="description" content="Browse our full menu of signature haircuts — fades, crops, pompadours, beards and more. Filter, favorite, and book instantly." />  <meta property="og:title" content="Haircuts Gallery — Style Hub" />
+  <meta property="og:description" content="Signature men's haircuts, fully filterable." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#f5b301" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+  <div id="nav-mount"></div>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>The <span class="text-gradient">Haircuts</span> Menu</h1>
+        <p>Every signature style we offer. Filter by category, price, or time — then book in one tap.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="pills" id="catPills" role="tablist"></div>
+
+        <div class="filters">
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="search" id="searchInput" placeholder="Search cuts, styles, categories…" aria-label="Search haircuts" />
+          </div>
+          <select id="sortSelect" aria-label="Sort haircuts">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low → high</option>
+            <option value="price-desc">Price: high → low</option>
+            <option value="time-asc">Quickest first</option>
+            <option value="name">Name A-Z</option>
+          </select>
+          <select id="priceFilter" aria-label="Max price">
+            <option value="100">Any price</option>
+            <option value="25">Under $25</option>
+            <option value="35">Under $35</option>
+            <option value="45">Under $45</option>
+          </select>
+          <select id="timeFilter" aria-label="Max time">
+            <option value="120">Any time</option>
+            <option value="30">≤ 30 min</option>
+            <option value="45">≤ 45 min</option>
+            <option value="60">≤ 60 min</option>
+          </select>
+          <span id="resultCount" class="text-muted" style="font-size:.85rem; margin-left: auto;"></span>
+        </div>
+
+        <div id="cutsGrid" class="grid grid-3"></div>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+
+  <script src="/js/firebase.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/gallery.js"></script>
+</body>
+</html>

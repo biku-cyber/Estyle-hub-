@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Style Hub — Premium Men's Salon & Barbershop</title>
+  <meta name="description" content="Style Hub is a premium men's salon offering signature fades, beard sculpting, and hot-towel rituals. Book your appointment online." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Style Hub — Premium Men's Salon" />
+  <meta property="og:description" content="Signature cuts, beard sculpting, and hot-towel rituals. Book online." />
+  <meta property="og:image" content="/assets/logo.svg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Style Hub — Premium Men's Salon" />
+  <meta name="twitter:description" content="Signature cuts, beard sculpting, and hot-towel rituals." />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#f5b301" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+  <!-- ================= Navbar ================= -->
+  <header class="navbar">
+    <div class="container">
+      <a href="/home.html" class="brand" aria-label="Style Hub home">
+        <img src="/assets/logo.svg" alt="" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/gallery.html">Haircuts</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/booking.html">Book</a></li>
+          <li><a href="/favorites.html">Favorites</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div data-auth-slot class="auth-slot">
+          <button type="button" class="btn btn-ghost btn-sm" data-auth-login>Sign in</button>
+        </div>
+        <a href="/booking.html" class="btn btn-primary btn-sm">Book Now</a>
+
+        <button class="icon-btn nav-toggle" aria-label="Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+      <div class="hero-media"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">◆ <span data-site-tagline>Where Every Cut Feels Like a Ritual</span></span>
+          <h1>The Cut That <span class="accent">Defines</span> You.</h1>
+          <p>Master barbers, premium products, and an experience engineered for men who care about the details. Walk in as a customer, leave as a regular.</p>
+          <div class="hero-actions">
+            <a href="/booking.html" class="btn btn-primary">
+              Book Appointment
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="/gallery.html" class="btn btn-secondary">Explore Haircuts</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>12+</strong><span>Years of craft</span></div>
+            <div class="stat"><strong>15K+</strong><span>Cuts delivered</span></div>
+            <div class="stat"><strong>4.9★</strong><span>Client rating</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Trending Styles ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Trending</span>
+          <h2>Signature Styles This Season</h2>
+          <p>Hand-picked cuts our clients keep coming back for.</p>
+        </div>
+        <div id="trendingGrid" class="grid grid-4"></div>
+        <div class="center mt-4"><a href="/gallery.html" class="btn btn-secondary">View all haircuts</a></div>
+      </div>
+    </section>
+
+    <!-- ================= Popular Today ================= -->
+    <section class="section" style="background: var(--bg-elev);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Today's Popular</span>
+          <h2>What Everyone's Booking</h2>
+        </div>
+        <div id="popularGrid" class="grid grid-4"></div>
+      </div>
+    </section>
+
+    <!-- ================= Reviews ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Reviews</span>
+          <h2>Loved by Our Regulars</h2>
+        </div>
+        <div id="reviewsGrid" class="grid grid-3"></div>
+      </div>
+    </section>
+
+    <!-- ================= Hours + Location ================= -->
+    <section class="section" style="background: var(--bg-elev);">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="reveal">
+            <span class="eyebrow" style="color: var(--accent); font-weight:600; letter-spacing: .2em; text-transform: uppercase;">Visit us</span>
+            <h2 style="margin-top:.75rem;">Opening Hours & Location</h2>
+            <p class="text-muted mt-2" data-site-address>—</p>
+            <ul id="hoursList" data-site-hours class="mt-4" style="list-style:none; display:grid; gap:.75rem; max-width: 420px;"></ul>
+            <a href="/contact.html" class="btn btn-secondary mt-4">Get directions</a>
+          </div>
+          <div class="map-placeholder reveal">
+            <div style="text-align:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p style="margin-top: .75rem;" data-site-address>—</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 1rem;">
+            <img src="/assets/logo.svg" alt="" style="height: 28px;" />
+          </div>
+          <p class="text-muted" style="font-size: .9rem; max-width: 320px;" data-site-tagline>—</p>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="/gallery.html">Haircuts</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/booking.html">Book</a></li>
+            <li><a href="/favorites.html">Favorites</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="#" data-site-phone>—</a></li>
+            <li><a href="#" data-site-email>—</a></li>
+            <li><span class="text-muted" data-site-address>—</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> <span data-site-name>Style Hub</span>. All rights reserved.</span>
+        <div class="social">
+          <a class="icon-btn" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a class="icon-btn" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="icon-btn" href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="/js/firebase.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/gallery.js"></script>
+  <script>
+    // Populate home-page featured sections
+    document.addEventListener("DOMContentLoaded", async () => {
+      await window.StyleHub.init();
+      const [cuts, reviews] = await Promise.all([
+        window.StyleHub.list("haircuts"),
+        window.StyleHub.list("reviews"),
+      ]);
+      const trending = cuts.filter((c) => c.trending).slice(0, 4);
+      const popular = cuts.filter((c) => c.popular).slice(0, 4);
+      const render = (id, list) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.innerHTML = list.map((h) => window.__GalleryCard(h)).join("");
+        requestAnimationFrame(() => el.querySelectorAll(".reveal").forEach((e) => e.classList.add("in")));
+      };
+      render("trendingGrid", trending.length ? trending : cuts.slice(0, 4));
+      render("popularGrid", popular.length ? popular : cuts.slice(4, 8));
+      const rw = document.getElementById("reviewsGrid");
+      if (rw) rw.innerHTML = reviews.map((r) => `
+        <div class="review reveal">
+          <div class="stars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</div>
+          <p>"${r.text}"</p>
+          <div class="author"><div class="avatar">${r.author[0]}</div><div><strong>${r.author}</strong><div class="text-muted" style="font-size:.8rem;">Verified client</div></div></div>
+        </div>`).join("");
+      requestAnimationFrame(() => document.querySelectorAll(".reveal").forEach((e) => e.classList.add("in")));
+    });
+  </script>
+</body>
+</html>

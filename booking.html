@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Your Appointment — Style Hub</title>
+  <meta name="description" content="Book your appointment at Style Hub in seconds. Choose your style, barber, date, and time." />
+  <meta property="og:title" content="Book Your Appointment — Style Hub" />
+  <meta property="og:description" content="Reserve your chair in under a minute." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#f5b301" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+  <div id="nav-mount"></div>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Book Your <span class="text-gradient">Chair</span></h1>
+        <p>Under a minute. Instant confirmation.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container" style="max-width: 720px;">
+        <form id="bookingForm" class="form card" style="padding: 2rem;">
+          <div class="form-row">
+            <div class="field">
+              <label for="nameInput">Full name</label>
+              <input id="nameInput" name="name" type="text" autocomplete="name" required />
+              <div class="error">Please enter your name.</div>
+            </div>
+            <div class="field">
+              <label for="phoneInput">Phone number</label>
+              <input id="phoneInput" name="phone" type="tel" autocomplete="tel" required />
+              <div class="error">Enter a valid phone number.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="styleSelect">Haircut style</label>
+              <select id="styleSelect" name="style" required></select>
+              <div class="error">Choose a style.</div>
+            </div>
+            <div class="field">
+              <label for="barberSelect">Barber</label>
+              <select id="barberSelect" name="barber"></select>
+              <div class="error"></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="dateInput">Date</label>
+            <input id="dateInput" name="date" type="date" required />
+            <div class="error">Pick a date.</div>
+          </div>
+
+          <div class="field" id="slotsField">
+            <label>Available time slots</label>
+            <div id="slots" class="time-slots"></div>
+            <div class="error">Please pick a time slot.</div>
+          </div>
+
+          <div class="field">
+            <label for="notesInput">Notes (optional)</label>
+            <textarea id="notesInput" name="notes" placeholder="Anything your barber should know?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:.5rem;">
+            Confirm Booking
+          </button>
+          <p class="text-muted center" style="font-size:.8rem;">We'll text you a confirmation shortly.</p>
+        </form>
+
+        <div id="success" class="success-screen hidden">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h2>You're booked!</h2>
+          <p class="text-muted mt-2">We'll send a text confirmation shortly. See you soon.</p>
+          <ul id="summary" style="list-style:none; text-align:left; margin: 2rem auto; max-width: 360px; display:grid; gap:.5rem;"></ul>
+          <div class="flex" style="gap:.75rem; justify-content:center; flex-wrap: wrap;">
+            <a href="/home.html" class="btn btn-secondary">Back home</a>
+            <a href="/gallery.html" class="btn btn-primary">Browse styles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer-mount"></div>
+
+  <script src="/js/firebase.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/booking.js"></script>
+</body>
+</html>
